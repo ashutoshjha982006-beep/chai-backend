@@ -19,9 +19,13 @@ app.use(cookieParser())
 //(err,req,res,next) next is middleware
 
 //routes import
-import userRouter from './routes/user.routes.js'
+import userRouter from "../routes/user.routes.js"
 //routes declaration
+//.get tha kyuki app ke through yahi route yahi controller likh rahe the
+// but kyuki router alag kiya hai toh middleware lagao
 
+app.use("/api1/v1/users",userRouter)
+///  http://localhost:8000/api/v1/users/register
 
 export{ app }
 
