@@ -18,6 +18,11 @@ app.use(cookieParser())
 //res lene se pehle check kare ki res le bhi sakte hai ya nahi issi ke liye middle ware use hota hai
 //(err,req,res,next) next is middleware
 
+//routes import
+import userRouter from './routes/user.routes.js'
+//routes declaration
+
+
 export{ app }
 
 //issi chiz ko baar baar karna hai toh util use karrenge
