@@ -51,11 +51,11 @@ const userSchema=new Schema({
 //bcrypt-used for encryption of password
 //it's a middle ware (pre hook) before "save"
 
-userSchema.pre("save",async function (next){
-    if(!this.isModified("password"))return next()//agar modify nahi hua toh return
-    this.password=await bcrypt(this.password,10)
-    next()
-})
+userSchema.pre("save", async function () {
+    if (!this.isModified("password")) return;
+
+    this.password = await bcrypt.hash(this.password, 10);
+});
 
 userSchema.methods.isPasswordCorrect = async function(password){
     return await bcrypt.compare(password,this.password)
