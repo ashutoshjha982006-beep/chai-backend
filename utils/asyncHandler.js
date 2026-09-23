@@ -6,6 +6,8 @@ const asyncHandler=(requestHandler)=>{
 
 export {asyncHandler}
 
+//asyncHandler Express route/controller ke around use hota hai, taaki async function ke errors automatically next(err) ke through error middleware tak chale jaayein.
+
 //const asyncHandler=() => {}
 //const asyncHandler=(func)=>()=>{}
 //const asyncHandler=(func)=>async()=>{}
