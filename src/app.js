@@ -24,7 +24,7 @@ import userRouter from "../routes/user.routes.js"
 //.get tha kyuki app ke through yahi route yahi controller likh rahe the
 // but kyuki router alag kiya hai toh middleware lagao
 
-app.use("/api1/v1/users",userRouter)
+app.use("/api/v1/users",userRouter)
 ///  http://localhost:8000/api/v1/users/register
 
 export{ app }
